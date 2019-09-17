@@ -87,7 +87,10 @@ litters_data = read_csv(file = "./data_import_examples//FAS_litters.csv",
 ``` r
 #using readxl package
 
-mlb11_data = read_excel(path = "./data_import_examples/mlb11.xlsx")
+mlb11_data = read_excel(path = "./data_import_examples/mlb11.xlsx",
+                        range = "A1:D7")
+
+write_csv(mlb11_data, path = "./data_import_examples/mlb_subset.csv")
 ```
 
 \#\#Read in
